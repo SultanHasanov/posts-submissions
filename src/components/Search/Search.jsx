@@ -6,9 +6,9 @@ const Search = ({search, setSearch}) => {
 
 
 
-    
+
     return (
-      <div>
+      <>
         <input
           type="text"
           placeholder="Поиск по ID"
@@ -22,7 +22,7 @@ const Search = ({search, setSearch}) => {
           <option value="">По убыванию</option>
           <option value="">По возрастанию</option>
         </select>
-      </div>
+      </>
     );
 };
 
