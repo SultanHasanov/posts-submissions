@@ -2,7 +2,7 @@ import "./App.css";
 import { useState } from 'react'
 import Posts from "./components/Post/Posts";
 import { Routes, Route } from "react-router-dom";
-import Comments from "./components/Comments/Comments";
+import Comments from "./components/Comment/Comments";
 import { createContext } from "react";
 
 export const Context = createContext();

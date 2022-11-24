@@ -3,6 +3,8 @@ import React, { useState, useContext, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import { Context } from '../../App';
+import style from "./comments.module.sass";
+
 
 
 const Comments = () => {
@@ -36,9 +38,15 @@ const Comments = () => {
           <h1>Вы открыли страницу поста c ID = {params.id}</h1>
           {comment.map((item) => {
             return (
-              <div>
-                <div>{item.email}</div>
-                <div>{item.body}</div>
+              <div className={style.comment_body}>
+                <div className={style.comment_text}>
+                  <b>User: </b>
+                  {item.email}
+                </div>
+                <div>
+                  <b>Comments: </b>
+                  {item.body}
+                </div>
               </div>
             );
           })}
