@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from 'react'
+import Posts from "./components/Post/Posts";
+import { Routes, Route } from "react-router-dom";
+import Comments from "./components/Comments/Comments";
+import { createContext } from "react";
+
+export const Context = createContext();
 
 function App() {
+  const [post, setPost] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Context.Provider value={{post, loading, setPost, setLoading}}>
+        <Routes>
+          <Route path="/" element={<Posts />}></Route>
+          <Route path="/posts/:id" element={<Comments />}></Route>
+        </Routes>
+      </Context.Provider>
     </div>
   );
 }
