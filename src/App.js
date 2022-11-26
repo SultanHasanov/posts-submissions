@@ -11,9 +11,16 @@ function App() {
   const [post, setPost] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const value = {
+    post,
+    loading,
+    setPost,
+    setLoading,
+  };
+
   return (
     <div className="App">
-      <Context.Provider value={{post, loading, setPost, setLoading}}>
+      <Context.Provider value={value}>
         <Routes>
           <Route path="/" element={<Posts />}></Route>
           <Route path="/posts/:id" element={<Comments />}></Route>
