@@ -9,17 +9,50 @@
     .search
         display: flex
         flex-direction: column
-        .form
+        position: relative
+        
+        .addPost
+            padding: 5px 15px
+            color: teal
+            font-size: 14px
+            background: #fff
+            opacity: 1 !important
+            border: 1px solid teal
+            cursor: pointer
+            margin-left: 0
+            border-radius: 5px
+            &:hover
+                background-color: teal
+                color: #fff
+                transition: 200ms
+        .form_body
             width: 200px
-            height: 140px
-            border: 2px solid black
-            margin-top: 10px
-            padding-top: 6px
+            height: 120px
+            border: 2px solid teal
+            opacity: 0.6
+            padding-top: 1px
+            position: absolute
+            border-radius: 6px
+            top: 90px
             input
                 width: 70%
             button
                 width: 86%
                 height: 25px
+                padding: 5px 15px
+                color: teal
+                font-size: 14px
+                background: #fff
+                opacity: 1 !important
+                border: 1px solid teal
+                cursor: pointer
+                margin-left: 5px
+                border-radius: 5px
+                &:hover
+                    background-color: teal
+                    color: #fff
+                    transition: 200ms
+
         button
             margin-top: 10px
             width: 150px 
@@ -55,5 +88,15 @@
 
         .btn_delete_post
             &:hover
+                border: 1px solid red
                 background: red
                 color: white
+
+.modal 
+    display: flex
+    margin-bottom: 5px
+    .form_wrapper
+        position: relative
+        top: -80px
+        margin-left: 10px
+  

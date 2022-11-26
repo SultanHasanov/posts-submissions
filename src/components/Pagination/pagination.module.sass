@@ -1,0 +1,25 @@
+.pagination
+    li
+        display: inline-block
+
+        a
+            width: 40px
+            height: 40px
+            border: 1px solid teal
+            color: teal
+            border-radius: 5px
+            text-align: center
+            line-height: 38px
+            margin-right: 10px
+            cursor: pointer
+            display: inline-block
+
+            &:hover
+                background-color: green
+                color: white
+
+    :global
+        .selected
+            a
+                background-color: green
+                color: white

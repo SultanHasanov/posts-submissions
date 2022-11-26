@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import style from "./search.module.sass";
 
 const Search = ({ search, setSearch, select, setSelect }) => {
