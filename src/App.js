@@ -4,6 +4,7 @@ import Posts from "./components/Post/Posts";
 import { Routes, Route } from "react-router-dom";
 import Comments from "./components/Comment/Comments";
 import { createContext } from "react";
+import NotFound from "./pages/NotFound";
 
 export const Context = createContext();
 
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Posts />}></Route>
           <Route path="/posts/:id" element={<Comments />}></Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Context.Provider>
     </div>
